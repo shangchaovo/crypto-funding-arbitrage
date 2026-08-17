@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>加密终端 · 资金费率套利 / Meme 异动 / 清算热图 / 期权Wall</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=20260817b" />
+    <link rel="stylesheet" href="css/styles.css?v=20260817b" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="terminal-header">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">◈</div>
+          <div class="brand-text">
+            <p class="eyebrow">Unified Crypto Terminal</p>
+            <h1>加密终端</h1>
+          </div>
+        </div>
+
+        <nav class="board-nav" id="boardNav" role="tablist" aria-label="板块导航">
+          <!-- 板块标签由 JS 注入 -->
+        </nav>
+
+        <div class="header-actions">
+          <div class="time-panel" aria-live="polite" title="距离下一次 UTC 资金费结算">
+            <span class="muted">下次结算</span>
+            <strong id="countdown">--:--:--</strong>
+          </div>
+          <div class="time-panel">
+            <span class="muted">数据更新</span>
+            <strong id="lastUpdated">--</strong>
+          </div>
+          <div class="time-panel refresh-status-panel">
+            <span class="muted">数据状态</span>
+            <strong id="refreshStatus" class="refresh-status ok">
+              <span class="status-dot"></span>
+              <span class="status-text">正常</span>
+              <span class="status-age"></span>
+            </strong>
+          </div>
+          <button id="settingsBtn" class="btn" type="button" title="设置 (Shift+S)">⚙️</button>
+          <button id="refreshBtn" class="btn primary" type="button" title="刷新当前板块 (R)">刷新</button>
+        </div>
+      </header>
+
+      <main id="boardHost" class="board-host">
+        <!-- 各板块视图由对应模块渲染注入 -->
+      </main>
+
+      <footer class="footer">
+        <div id="exchangeStatus" class="status-list" aria-label="数据源连接状态"></div>
+        <span class="muted">数据为实时拉取,页面不可见时暂停轮询;资金费率已归一为 8h 等价。</span>
+      </footer>
+    </div>
+
+    <div id="toastHost" class="toast-host" aria-live="polite"></div>
+
+    <!-- 历史走势图 Modal -->
+    <div id="chartOverlay" class="settings-overlay"></div>
+    <div id="chartModal" class="chart-modal" role="dialog" aria-modal="true">
+      <div class="settings-head">
+        <h3 id="chartTitle">📈 费率历史</h3>
+        <button id="closeChart" class="btn ghost" type="button">✕</button>
+      </div>
+      <div id="chartBody" class="chart-body"></div>
+      <div class="chart-legend" id="chartLegend"></div>
+    </div>
+
+    <!-- 设置面板 -->
+    <div id="settingsOverlay" class="settings-overlay"></div>
+    <div id="settingsPanel" class="settings-panel" role="dialog" aria-modal="true">
+      <div class="settings-head">
+        <h3>⚙️ 设置</h3>
+        <button id="closeSettings" class="btn ghost" type="button">✕</button>
+      </div>
+
+      <div class="settings-section">
+        <h4>套利筛选</h4>
+        <div class="settings-row">
+          <label>最小价差阈值(跨所,8h)</label>
+          <input id="minSpreadInput" type="number" step="0.0001" value="0.0001" />
+        </div>
+        <div class="settings-row">
+          <label>最小年化阈值 APR (%)</label>
+          <input id="minAprInput" type="number" step="1" value="0" />
+        </div>
+        <div class="settings-row">
+          <label>隐藏低置信机会(数据陈旧 / 伪套利)</label>
+          <label class="notify-toggle"><input id="hideLowConfidence" type="checkbox" /></label>
+        </div>
+        <div class="settings-row">
+          <label>仅显示可买现货的正向套利</label>
+          <label class="notify-toggle"><input id="onlyAccessible" type="checkbox" checked /></label>
+        </div>
+        <div class="settings-row">
+          <label>评估仓位 (USDT,用于"每 8h 收益")</label>
+          <input id="evalPositionInput" type="number" step="1000" min="100" value="10000" />
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <h4>Meme 板块</h4>
+        <div class="settings-row">
+          <label>默认筛除貔貅/rug(有买无卖、异常涨幅、合约危险)</label>
+          <label class="notify-toggle"><input id="memeHideRug" type="checkbox" checked /></label>
+        </div>
+        <div class="settings-row">
+          <label>仅看早期信号(吸筹 / 启动)</label>
+          <label class="notify-toggle"><input id="memeOnlyEarly" type="checkbox" /></label>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <h4>通知</h4>
+        <div class="settings-row">
+          <label>套利告警(APR 超阈值时浏览器通知)</label>
+          <label class="notify-toggle"><input id="notifyToggle" type="checkbox" /></label>
+        </div>
+        <div class="settings-row">
+          <label>通知 APR 阈值 (%)</label>
+          <input id="notifyAprInput" type="number" step="1" value="30" />
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <h4>盈亏模拟(现货-永续 delta 中性)</h4>
+        <div class="simulator" id="simulator">
+          <div class="sim-row">
+            <label>仓位</label>
+            <input id="simPosition" type="number" step="100" min="0" value="10000" />
+            <span class="muted">USDT</span>
+          </div>
+          <div class="sim-row">
+            <label>每 8h 费率</label>
+            <input id="simRate" type="number" step="0.001" min="0" value="0.10" />
+            <span class="muted">%</span>
+          </div>
+          <div class="sim-row">
+            <label>预期持仓</label>
+            <input id="simHold" type="number" step="8" min="8" value="72" />
+            <span class="muted">小时(摊销手续费)</span>
+          </div>
+          <div class="sim-result">
+            <div class="sim-item"><span>每 8h 资金费</span><strong id="sim8h">--</strong></div>
+            <div class="sim-item"><span>净年化(扣费)</span><strong id="simApr">--</strong></div>
+            <div class="sim-item"><span>开+平手续费</span><strong id="simFee">--</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-actions">
+        <button id="resetSettings" class="btn ghost" type="button">重置</button>
+        <button id="saveSettings" class="btn primary" type="button">保存</button>
+      </div>
+    </div>
+
+    <script type="module" src="js/app.js?v=20260817b"></script>
+  </body>
+</html>

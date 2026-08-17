@@ -1,0 +1,2063 @@
+{
+  "fetchedAt": "2026-07-05T06:40:35.384Z",
+  "source": "prefetch",
+  "symbols": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP",
+    "BNB",
+    "DOGE",
+    "ADA",
+    "AVAX",
+    "TRX",
+    "LINK",
+    "DOT",
+    "MATIC",
+    "LTC",
+    "BCH",
+    "UNI",
+    "ATOM",
+    "ETC",
+    "FIL",
+    "APT",
+    "ARB",
+    "OP",
+    "SUI",
+    "NEAR",
+    "AAVE",
+    "INJ",
+    "TIA",
+    "SEI",
+    "WLD",
+    "ORDI",
+    "PEPE",
+    "SHIB",
+    "TON",
+    "HBAR",
+    "ICP",
+    "RUNE",
+    "MKR",
+    "FET",
+    "GALA",
+    "DYDX",
+    "STRK"
+  ],
+  "exchangeStatus": {
+    "hyperliquid": {
+      "status": "ok",
+      "error": ""
+    },
+    "dydx": {
+      "status": "ok",
+      "error": ""
+    },
+    "bitget": {
+      "status": "ok",
+      "error": ""
+    },
+    "binance": {
+      "status": "ok",
+      "error": ""
+    },
+    "bybit": {
+      "status": "ok",
+      "error": ""
+    },
+    "okx": {
+      "status": "ok",
+      "error": ""
+    }
+  },
+  "rates": [
+    {
+      "symbol": "MATIC",
+      "exchange": "binance",
+      "fundingRate": 0.0001,
+      "markPrice": 0.19800164,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "OP",
+      "exchange": "binance",
+      "fundingRate": 0.0001,
+      "markPrice": 0.106397,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "DOGE",
+      "exchange": "binance",
+      "fundingRate": 0.00002266,
+      "markPrice": 0.07578,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "UNI",
+      "exchange": "binance",
+      "fundingRate": 0.0001,
+      "markPrice": 3.18619524,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "ETC",
+      "exchange": "binance",
+      "fundingRate": 0.00004135,
+      "markPrice": 7.077,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "RUNE",
+      "exchange": "binance",
+      "fundingRate": 0.0001,
+      "markPrice": 0.41217675,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "ATOM",
+      "exchange": "binance",
+      "fundingRate": -0.00049545,
+      "markPrice": 1.55216286,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "TIA",
+      "exchange": "binance",
+      "fundingRate": 0.00005,
+      "markPrice": 0.38903936,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "LINK",
+      "exchange": "binance",
+      "fundingRate": 0.00001593,
+      "markPrice": 7.879,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "NEAR",
+      "exchange": "binance",
+      "fundingRate": 0.0001,
+      "markPrice": 1.95007234,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "ICP",
+      "exchange": "binance",
+      "fundingRate": -0.00002238,
+      "markPrice": 2.209,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "FET",
+      "exchange": "binance",
+      "fundingRate": -0.00005058,
+      "markPrice": 0.1767266,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "TON",
+      "exchange": "binance",
+      "fundingRate": 0,
+      "markPrice": 1.59969124,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "DYDX",
+      "exchange": "binance",
+      "fundingRate": 0.0000088,
+      "markPrice": 0.12736062,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "APT",
+      "exchange": "binance",
+      "fundingRate": -0.00013871,
+      "markPrice": 0.61683358,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "ADA",
+      "exchange": "binance",
+      "fundingRate": 0.0001,
+      "markPrice": 0.18914264,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "SUI",
+      "exchange": "binance",
+      "fundingRate": 0.00005572,
+      "markPrice": 0.74281515,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "ETH",
+      "exchange": "binance",
+      "fundingRate": 0.0000623,
+      "markPrice": 1764.65651938,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "TRX",
+      "exchange": "binance",
+      "fundingRate": 0.00002166,
+      "markPrice": 0.32463518,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "BNB",
+      "exchange": "binance",
+      "fundingRate": 0.0000199,
+      "markPrice": 572.01,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "ORDI",
+      "exchange": "binance",
+      "fundingRate": -0.00004889,
+      "markPrice": 3.308,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "HBAR",
+      "exchange": "binance",
+      "fundingRate": 0.0001,
+      "markPrice": 0.07444018,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "SEI",
+      "exchange": "binance",
+      "fundingRate": -0.00011244,
+      "markPrice": 0.04887,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "BTC",
+      "exchange": "binance",
+      "fundingRate": 0.00007968,
+      "markPrice": 62731.07555072,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "LTC",
+      "exchange": "binance",
+      "fundingRate": 0.00005373,
+      "markPrice": 44.21423529,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "FIL",
+      "exchange": "binance",
+      "fundingRate": 0.0001,
+      "markPrice": 0.78302343,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "STRK",
+      "exchange": "binance",
+      "fundingRate": 0.00005,
+      "markPrice": 0.03057579,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "DOT",
+      "exchange": "binance",
+      "fundingRate": 0.00001401,
+      "markPrice": 0.86740884,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "GALA",
+      "exchange": "binance",
+      "fundingRate": -0.00004188,
+      "markPrice": 0.0022897,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "BCH",
+      "exchange": "binance",
+      "fundingRate": 0.0001,
+      "markPrice": 237.27336459,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "MKR",
+      "exchange": "binance",
+      "fundingRate": 0,
+      "markPrice": 1818.50800619,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "ARB",
+      "exchange": "binance",
+      "fundingRate": -0.0000883,
+      "markPrice": 0.07822067,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "INJ",
+      "exchange": "binance",
+      "fundingRate": -0.00024641,
+      "markPrice": 4.68725131,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "AVAX",
+      "exchange": "binance",
+      "fundingRate": -0.00012109,
+      "markPrice": 6.78110453,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "AAVE",
+      "exchange": "binance",
+      "fundingRate": -0.00000895,
+      "markPrice": 87.62115837,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "XRP",
+      "exchange": "binance",
+      "fundingRate": 0.00005495,
+      "markPrice": 1.137,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "WLD",
+      "exchange": "binance",
+      "fundingRate": 0.0001,
+      "markPrice": 0.41337848,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "SOL",
+      "exchange": "binance",
+      "fundingRate": 0.00005548,
+      "markPrice": 80.46802961,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.307Z"
+    },
+    {
+      "symbol": "BTC",
+      "exchange": "okx",
+      "fundingRate": 0.000079273698584,
+      "markPrice": 62734.4,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.745Z"
+    },
+    {
+      "symbol": "ETH",
+      "exchange": "okx",
+      "fundingRate": 0.0000684389034713,
+      "markPrice": 1764.63,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.753Z"
+    },
+    {
+      "symbol": "SOL",
+      "exchange": "okx",
+      "fundingRate": 0.0001,
+      "markPrice": 80.46,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.767Z"
+    },
+    {
+      "symbol": "XRP",
+      "exchange": "okx",
+      "fundingRate": 0.0000488065835534,
+      "markPrice": 1.1366,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.821Z"
+    },
+    {
+      "symbol": "BNB",
+      "exchange": "okx",
+      "fundingRate": 0.000076458462585,
+      "markPrice": 571.4,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.759Z"
+    },
+    {
+      "symbol": "DOGE",
+      "exchange": "okx",
+      "fundingRate": 0.0001,
+      "markPrice": 0.07576,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.565Z"
+    },
+    {
+      "symbol": "ADA",
+      "exchange": "okx",
+      "fundingRate": 0.0001,
+      "markPrice": 0.189,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.765Z"
+    },
+    {
+      "symbol": "AVAX",
+      "exchange": "okx",
+      "fundingRate": -0.0001478866280794,
+      "markPrice": 6.78,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.752Z"
+    },
+    {
+      "symbol": "TRX",
+      "exchange": "okx",
+      "fundingRate": -0.0000580604620944,
+      "markPrice": 0.32458,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:22.075Z"
+    },
+    {
+      "symbol": "LINK",
+      "exchange": "okx",
+      "fundingRate": 0.0000244322540721,
+      "markPrice": 7.878,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.752Z"
+    },
+    {
+      "symbol": "DOT",
+      "exchange": "okx",
+      "fundingRate": 0.0000618323551492,
+      "markPrice": 0.8673,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:23.112Z"
+    },
+    {
+      "symbol": "LTC",
+      "exchange": "okx",
+      "fundingRate": 0.0000246648834732,
+      "markPrice": 44.21,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:23.111Z"
+    },
+    {
+      "symbol": "BCH",
+      "exchange": "okx",
+      "fundingRate": 0.0000940266747562,
+      "markPrice": 236.8,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:23.427Z"
+    },
+    {
+      "symbol": "UNI",
+      "exchange": "okx",
+      "fundingRate": 0.0001,
+      "markPrice": 3.185,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:23.633Z"
+    },
+    {
+      "symbol": "ATOM",
+      "exchange": "okx",
+      "fundingRate": -0.0002226557608891,
+      "markPrice": 1.55,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:23.112Z"
+    },
+    {
+      "symbol": "ETC",
+      "exchange": "okx",
+      "fundingRate": 0.0000137982003128,
+      "markPrice": 7.075,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:22.955Z"
+    },
+    {
+      "symbol": "FIL",
+      "exchange": "okx",
+      "fundingRate": 0.0000251589615588,
+      "markPrice": 0.7824,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:23.112Z"
+    },
+    {
+      "symbol": "APT",
+      "exchange": "okx",
+      "fundingRate": -0.0000805234659915,
+      "markPrice": 0.6163,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:23.419Z"
+    },
+    {
+      "symbol": "ARB",
+      "exchange": "okx",
+      "fundingRate": 0.0000112962250391,
+      "markPrice": 0.07817,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:23.288Z"
+    },
+    {
+      "symbol": "OP",
+      "exchange": "okx",
+      "fundingRate": 0.0001,
+      "markPrice": 0.10626,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:24.683Z"
+    },
+    {
+      "symbol": "SUI",
+      "exchange": "okx",
+      "fundingRate": 0.0001,
+      "markPrice": 0.7427,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:24.437Z"
+    },
+    {
+      "symbol": "NEAR",
+      "exchange": "okx",
+      "fundingRate": 0.0001,
+      "markPrice": 1.95,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:25.431Z"
+    },
+    {
+      "symbol": "AAVE",
+      "exchange": "okx",
+      "fundingRate": -0.0000385464842308,
+      "markPrice": 87.62,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:24.839Z"
+    },
+    {
+      "symbol": "INJ",
+      "exchange": "okx",
+      "fundingRate": -0.0000360060676132,
+      "markPrice": 4.687,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:24.429Z"
+    },
+    {
+      "symbol": "TIA",
+      "exchange": "okx",
+      "fundingRate": 0.0000046729730979,
+      "markPrice": 0.3888,
+      "nextFundingTime": 1783252800000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:25.224Z"
+    },
+    {
+      "symbol": "SEI",
+      "exchange": "okx",
+      "fundingRate": 0.0000191511546503,
+      "markPrice": 0.04885,
+      "nextFundingTime": 1783252800000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:25.207Z"
+    },
+    {
+      "symbol": "WLD",
+      "exchange": "okx",
+      "fundingRate": 0.0000224789188487,
+      "markPrice": 0.4131,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:24.683Z"
+    },
+    {
+      "symbol": "ORDI",
+      "exchange": "okx",
+      "fundingRate": 0.0000432393424204,
+      "markPrice": 3.308,
+      "nextFundingTime": 1783252800000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:24.936Z"
+    },
+    {
+      "symbol": "PEPE",
+      "exchange": "okx",
+      "fundingRate": 0.0000871460124766,
+      "markPrice": 0.000002652,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:24.445Z"
+    },
+    {
+      "symbol": "SHIB",
+      "exchange": "okx",
+      "fundingRate": 0.0000196196759523,
+      "markPrice": 0.000004314,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:26.303Z"
+    },
+    {
+      "symbol": "ICP",
+      "exchange": "okx",
+      "fundingRate": -0.0000885045508998,
+      "markPrice": 2.207,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:26.400Z"
+    },
+    {
+      "symbol": "GALA",
+      "exchange": "okx",
+      "fundingRate": 0.0001,
+      "markPrice": 0.002288,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:26.384Z"
+    },
+    {
+      "symbol": "DYDX",
+      "exchange": "okx",
+      "fundingRate": 0.0000461150474654,
+      "markPrice": 0.12745,
+      "nextFundingTime": 1783267200000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:26.780Z"
+    },
+    {
+      "symbol": "STRK",
+      "exchange": "okx",
+      "fundingRate": 0.00005,
+      "markPrice": 0.03054,
+      "nextFundingTime": 1783252800000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:26.360Z"
+    },
+    {
+      "symbol": "AAVE",
+      "exchange": "bybit",
+      "fundingRate": -0.00002986,
+      "markPrice": 87.61,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "ADA",
+      "exchange": "bybit",
+      "fundingRate": 0.00008907,
+      "markPrice": 0.1891,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "APT",
+      "exchange": "bybit",
+      "fundingRate": 0.00002113,
+      "markPrice": 0.6168,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "ARB",
+      "exchange": "bybit",
+      "fundingRate": 0,
+      "markPrice": 0.07821,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "ATOM",
+      "exchange": "bybit",
+      "fundingRate": -0.00030423,
+      "markPrice": 1.5514,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "AVAX",
+      "exchange": "bybit",
+      "fundingRate": -0.00003759,
+      "markPrice": 6.781,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "BCH",
+      "exchange": "bybit",
+      "fundingRate": 0.0001,
+      "markPrice": 237.4,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "BNB",
+      "exchange": "bybit",
+      "fundingRate": 0.00007049,
+      "markPrice": 571.4,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "BTC",
+      "exchange": "bybit",
+      "fundingRate": 0.00003907,
+      "markPrice": 62727.99,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "DOGE",
+      "exchange": "bybit",
+      "fundingRate": -0.00005131,
+      "markPrice": 0.07579,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "DOT",
+      "exchange": "bybit",
+      "fundingRate": -0.00004221,
+      "markPrice": 0.8676,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "DYDX",
+      "exchange": "bybit",
+      "fundingRate": 0.0001,
+      "markPrice": 0.12738,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "ETC",
+      "exchange": "bybit",
+      "fundingRate": 0.00006928,
+      "markPrice": 7.075,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "ETH",
+      "exchange": "bybit",
+      "fundingRate": 0.00001419,
+      "markPrice": 1764.48,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "FIL",
+      "exchange": "bybit",
+      "fundingRate": 0.00008106,
+      "markPrice": 0.7825,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "GALA",
+      "exchange": "bybit",
+      "fundingRate": 0.0001,
+      "markPrice": 0.00229,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "HBAR",
+      "exchange": "bybit",
+      "fundingRate": 0.0001,
+      "markPrice": 0.07445,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "ICP",
+      "exchange": "bybit",
+      "fundingRate": 0.00007968,
+      "markPrice": 2.209,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "INJ",
+      "exchange": "bybit",
+      "fundingRate": -0.0004609,
+      "markPrice": 4.6884,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "LINK",
+      "exchange": "bybit",
+      "fundingRate": -0.00001398,
+      "markPrice": 7.879,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "LTC",
+      "exchange": "bybit",
+      "fundingRate": 0,
+      "markPrice": 44.22,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "NEAR",
+      "exchange": "bybit",
+      "fundingRate": 0.00006384,
+      "markPrice": 1.9503,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "OP",
+      "exchange": "bybit",
+      "fundingRate": 0.0001,
+      "markPrice": 0.1063,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "ORDI",
+      "exchange": "bybit",
+      "fundingRate": -0.0000612,
+      "markPrice": 3.307,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "RUNE",
+      "exchange": "bybit",
+      "fundingRate": 0.00009633,
+      "markPrice": 0.4121,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "SEI",
+      "exchange": "bybit",
+      "fundingRate": 0.0001,
+      "markPrice": 0.04887,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "SOL",
+      "exchange": "bybit",
+      "fundingRate": -0.00009022,
+      "markPrice": 80.46,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "STRK",
+      "exchange": "bybit",
+      "fundingRate": 0.00005,
+      "markPrice": 0.03057,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "SUI",
+      "exchange": "bybit",
+      "fundingRate": 0.00005979,
+      "markPrice": 0.7426,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "TIA",
+      "exchange": "bybit",
+      "fundingRate": 0.00004779,
+      "markPrice": 0.3892,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "TRX",
+      "exchange": "bybit",
+      "fundingRate": -0.00014622,
+      "markPrice": 0.32456,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "UNI",
+      "exchange": "bybit",
+      "fundingRate": 0.0001,
+      "markPrice": 3.185,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "WLD",
+      "exchange": "bybit",
+      "fundingRate": -0.00004419,
+      "markPrice": 0.4133,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "XRP",
+      "exchange": "bybit",
+      "fundingRate": 0.0000246,
+      "markPrice": 1.1368,
+      "nextFundingTime": 1783238400000,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:27.984Z"
+    },
+    {
+      "symbol": "BTC",
+      "exchange": "dydx",
+      "fundingRate": -0.000058575,
+      "markPrice": 62738.56039,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "ETH",
+      "exchange": "dydx",
+      "fundingRate": -0.000083009375,
+      "markPrice": 1764.482949,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "LINK",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 7.877603843,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "MATIC",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.3932407381,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "SOL",
+      "exchange": "dydx",
+      "fundingRate": -0.000022425,
+      "markPrice": 80.47205983,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "ADA",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.1891735241,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "AVAX",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 6.78265388,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "FIL",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.782476005,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "LTC",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 44.20474772,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "DOGE",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.07577908694,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "ATOM",
+      "exchange": "dydx",
+      "fundingRate": -0.000002428125,
+      "markPrice": 1.552000408,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "DOT",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.868055382,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "UNI",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 3.18504632,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "BCH",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 236.9402368,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "TRX",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.32447286899,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "NEAR",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 1.94983632,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "MKR",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 1763.39,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "ETC",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 7.0805747,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "WLD",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.413330001,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "APT",
+      "exchange": "dydx",
+      "fundingRate": -7.03125e-7,
+      "markPrice": 0.616884627,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "ARB",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.078197827,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "OP",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.106327165,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "PEPE",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.0000026551679343,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "SEI",
+      "exchange": "dydx",
+      "fundingRate": -8.125e-8,
+      "markPrice": 0.0488719872,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "SHIB",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.000004317183055,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "SUI",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.7429,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "XRP",
+      "exchange": "dydx",
+      "fundingRate": -0.00000256875,
+      "markPrice": 1.1367363776,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "TIA",
+      "exchange": "dydx",
+      "fundingRate": -0.00000471875,
+      "markPrice": 0.38913049,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "AAVE",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 87.62148731,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "BNB",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 571.6952996,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "ORDI",
+      "exchange": "dydx",
+      "fundingRate": -0.0000036125,
+      "markPrice": 3.31113627,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "ICP",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 2.20949754,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "STRK",
+      "exchange": "dydx",
+      "fundingRate": -9e-7,
+      "markPrice": 0.0305789,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "FET",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 1.34838175,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "INJ",
+      "exchange": "dydx",
+      "fundingRate": -0.000008209375,
+      "markPrice": 4.68973302,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "HBAR",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.0744344599,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "RUNE",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.411728629,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "DYDX",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 0.127512853,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "TON",
+      "exchange": "dydx",
+      "fundingRate": 0,
+      "markPrice": 1.723178673,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "GALA",
+      "exchange": "dydx",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.00348567429,
+      "nextFundingTime": 1783237221544,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.544Z"
+    },
+    {
+      "symbol": "BTC",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 62750,
+      "nextFundingTime": 1783237221091,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.091Z"
+    },
+    {
+      "symbol": "ETH",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 1765.6,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "ATOM",
+      "exchange": "hyperliquid",
+      "fundingRate": -0.0001076729,
+      "markPrice": 1.5504,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "MATIC",
+      "exchange": "hyperliquid",
+      "fundingRate": 0,
+      "markPrice": 0.37621,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "DYDX",
+      "exchange": "hyperliquid",
+      "fundingRate": -0.0000083285,
+      "markPrice": 0.12731,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "SOL",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 80.499,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "AVAX",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000106317,
+      "markPrice": 6.7831,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "BNB",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000029614,
+      "markPrice": 571.37,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "OP",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.1063,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "LTC",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 44.231,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "ARB",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.07816,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "DOGE",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.075788,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "INJ",
+      "exchange": "hyperliquid",
+      "fundingRate": -0.0000366758,
+      "markPrice": 4.6871,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "SUI",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.74288,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "LINK",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 7.8837,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "XRP",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 1.1374,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "BCH",
+      "exchange": "hyperliquid",
+      "fundingRate": -0.0000102102,
+      "markPrice": 236.95,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "APT",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.6167,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "AAVE",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 87.679,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "MKR",
+      "exchange": "hyperliquid",
+      "fundingRate": 0,
+      "markPrice": 1831.5,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "WLD",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.41355,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "TRX",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.32461,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "UNI",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 3.1868,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "SEI",
+      "exchange": "hyperliquid",
+      "fundingRate": -0.0000240598,
+      "markPrice": 0.048865,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "RUNE",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.41218,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "DOT",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.86793,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "TIA",
+      "exchange": "hyperliquid",
+      "fundingRate": -0.0000324687,
+      "markPrice": 0.38904,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "ADA",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.18918,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "TON",
+      "exchange": "hyperliquid",
+      "fundingRate": 0,
+      "markPrice": 1.8014,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "FET",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.17678,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "NEAR",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 1.9516,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "ORDI",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 3.3072,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "FIL",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.78261,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "GALA",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.002289,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "ETC",
+      "exchange": "hyperliquid",
+      "fundingRate": -0.0000160984,
+      "markPrice": 7.0755,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "STRK",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.03059,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "HBAR",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 0.074462,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "ICP",
+      "exchange": "hyperliquid",
+      "fundingRate": 0.0000125,
+      "markPrice": 2.2101,
+      "nextFundingTime": 1783237221092,
+      "intervalHours": 1,
+      "fetchedAt": "2026-07-05T06:40:21.092Z"
+    },
+    {
+      "symbol": "BTC",
+      "exchange": "bitget",
+      "fundingRate": 0.000055,
+      "markPrice": 62728.7,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "ETH",
+      "exchange": "bitget",
+      "fundingRate": 0.000093,
+      "markPrice": 1764.72,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "XRP",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 1.1371,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "BCH",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 236.98,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "LTC",
+      "exchange": "bitget",
+      "fundingRate": -0.000011,
+      "markPrice": 44.21,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "ADA",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 0.1892,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "ETC",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 7.081,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "LINK",
+      "exchange": "bitget",
+      "fundingRate": -0.000048,
+      "markPrice": 7.878,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "TRX",
+      "exchange": "bitget",
+      "fundingRate": -0.000179,
+      "markPrice": 0.32453,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "DOT",
+      "exchange": "bitget",
+      "fundingRate": 0.000049,
+      "markPrice": 0.868,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "DOGE",
+      "exchange": "bitget",
+      "fundingRate": -0.00003,
+      "markPrice": 0.07577,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "SOL",
+      "exchange": "bitget",
+      "fundingRate": -0.000006,
+      "markPrice": 80.467,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "BNB",
+      "exchange": "bitget",
+      "fundingRate": 0.000024,
+      "markPrice": 571.35,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "UNI",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 3.185,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "ICP",
+      "exchange": "bitget",
+      "fundingRate": -0.00001,
+      "markPrice": 2.209,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "AAVE",
+      "exchange": "bitget",
+      "fundingRate": 0.000055,
+      "markPrice": 87.66,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "FIL",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 0.783,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "ATOM",
+      "exchange": "bitget",
+      "fundingRate": -0.00011,
+      "markPrice": 1.5515,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "AVAX",
+      "exchange": "bitget",
+      "fundingRate": -0.00014,
+      "markPrice": 6.78,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "SHIB",
+      "exchange": "bitget",
+      "fundingRate": 0.000047,
+      "markPrice": 0.000004317,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "GALA",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 0.002291,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "DYDX",
+      "exchange": "bitget",
+      "fundingRate": 0.000047,
+      "markPrice": 0.1273,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "NEAR",
+      "exchange": "bitget",
+      "fundingRate": 0.000052,
+      "markPrice": 1.95,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "RUNE",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 0.4122,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "APT",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 0.6171,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "OP",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 0.1063,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "FET",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 0.1768,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "HBAR",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 0.07446,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "INJ",
+      "exchange": "bitget",
+      "fundingRate": -0.00017,
+      "markPrice": 4.688,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "ARB",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 0.0782,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "SUI",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 0.7429,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "PEPE",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 0.0000026541,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "ORDI",
+      "exchange": "bitget",
+      "fundingRate": 0.00005,
+      "markPrice": 3.312,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "WLD",
+      "exchange": "bitget",
+      "fundingRate": 0.0001,
+      "markPrice": 0.4133,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "SEI",
+      "exchange": "bitget",
+      "fundingRate": -0.000173,
+      "markPrice": 0.04886,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "TIA",
+      "exchange": "bitget",
+      "fundingRate": 0.00005,
+      "markPrice": 0.3892,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    },
+    {
+      "symbol": "STRK",
+      "exchange": "bitget",
+      "fundingRate": 0.00005,
+      "markPrice": 0.030581,
+      "nextFundingTime": null,
+      "intervalHours": 8,
+      "fetchedAt": "2026-07-05T06:40:21.548Z"
+    }
+  ]
+}

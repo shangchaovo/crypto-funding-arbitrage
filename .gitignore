@@ -1,0 +1,6 @@
+.DS_Store
+.wrangler/
+logs/
+node_modules/
+# 死工作流(已弃用实时拉取架构) + gh token 缺 workflow scope 无法推送 .github/workflows,暂不入库
+.github/

@@ -1,0 +1,14 @@
+{
+  "exchanges": [
+    { "id": "binance", "name": "Binance", "hosts": ["fapi.binance.com"] },
+    { "id": "okx", "name": "OKX", "hosts": ["www.okx.com"] },
+    { "id": "bybit", "name": "Bybit", "hosts": ["api.bybit.com", "api.bytick.com", "api.bybit.eu", "api.byhkbit.com", "api.bybit-tr.com", "api.bybit.kz"] },
+    { "id": "gate", "name": "Gate.io", "hosts": ["api.gateio.ws"] },
+    { "id": "mexc", "name": "MEXC", "hosts": ["contract.mexc.com", "api.mexc.com"] },
+    { "id": "bitget", "name": "Bitget", "hosts": ["api.bitget.com"] },
+    { "id": "hyperliquid", "name": "Hyperliquid", "hosts": ["api.hyperliquid.xyz"] },
+    { "id": "dydx", "name": "dYdX", "hosts": ["indexer.dydx.trade"] },
+    { "id": "meme-data", "name": "MemeData", "hosts": ["api.dexscreener.com", "api.geckoterminal.com", "api.gopluslabs.io"] },
+    { "id": "deribit", "name": "Deribit", "hosts": ["www.deribit.com"] }
+  ]
+}
