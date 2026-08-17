@@ -5,7 +5,7 @@
 //     · OKX 期权(兜底)——公网边缘可达,确保公网也能出墙;深度略逊于 Deribit。
 //   指标:Max Pain 最大痛点、按行权价 Call/Put 持仓分布、大押注区、PCR、25Δ Skew。
 // ============================================================================
-import { FundingAPI } from "./api.js?v=20260817c";
+import { FundingAPI } from "./api.js?v=20260817d";
 
 const { fetchWithRetry } = FundingAPI;
 const DERIBIT = "https://www.deribit.com/api/v2/public";

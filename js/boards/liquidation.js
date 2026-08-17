@@ -4,10 +4,10 @@
 //   标注当前价、清算密集区(墙)、多空拥挤方向、主力收割方向。
 //   ⚠️ 公开 OI/K线/订单簿估算,非 CoinGlass 逐价格点真实清算数据。
 // ============================================================================
-import { Liquidation } from "../liquidation.js?v=20260817c";
+import { Liquidation } from "../liquidation.js?v=20260817d";
 import {
   h, fmtPctSigned, fmtUsd, fmtUsdCompact, fmtPrice, timeAgo, toast, skeletonHero, skeletonRows,
-} from "../ui.js?v=20260817c";
+} from "../ui.js?v=20260817d";
 
 export function createLiquidationBoard(ctx) {
   let host = null;
@@ -18,6 +18,9 @@ export function createLiquidationBoard(ctx) {
   let activeSymbol = "BTC";
 
   let heroEl, statsEl, panelEl, tabsEl;
+
+  // 回到本板块时,数据年龄超过此值才后台静默刷新(清算拉取较重,阈值放宽避免频繁打 OKX)
+  const REMOUNT_STALE_MS = 90_000;
 
   async function load(force = false) {
     if (loading) return;
@@ -70,9 +73,16 @@ export function createLiquidationBoard(ctx) {
     host.appendChild(statsEl);
     host.appendChild(panelEl);
     host.appendChild(h("p.disclaimer", { text: "⚠️ 本图为公开行情/OI/订单簿推导的概率密度估算,用于识别流动性密集区,非 CoinGlass 逐价格点真实清算数据,不构成投资建议。" }));
-    heroEl.appendChild(skeletonHero());
-    panelEl.appendChild(skeletonRows());
-    load(true);
+    // 秒回:会话内已有数据→直接渲染不闪骨架;太旧才后台静默刷新,冷载才骨架+强刷
+    if (results.length) {
+      renderAll();
+      const age = Date.now() - Date.parse(fetchedAt || 0);
+      if (age > REMOUNT_STALE_MS) load(false);
+    } else {
+      heroEl.appendChild(skeletonHero());
+      panelEl.appendChild(skeletonRows());
+      load(true);
+    }
   }
 
   function renderAll() {

@@ -3,14 +3,14 @@
 //   板块路由(hash)+ 设置 + 刷新编排 + 结算倒计时 + 历史图 Modal + 盈亏模拟。
 //   板块即插即用:在 BOARDS 注册一个 create 工厂即可。
 // ============================================================================
-import { FundingAPI } from "./api.js?v=20260817c";
-import { Countdown } from "./countdown.js?v=20260817c";
-import { HistoryDB } from "./history.js?v=20260817c";
-import { h, fmtClock, timeAgo, toast } from "./ui.js?v=20260817c";
-import { createFundingBoard } from "./boards/funding.js?v=20260817c";
-import { createMemeBoard } from "./boards/meme.js?v=20260817c";
-import { createLiquidationBoard } from "./boards/liquidation.js?v=20260817c";
-import { createOptionsBoard } from "./boards/options.js?v=20260817c";
+import { FundingAPI } from "./api.js?v=20260817d";
+import { Countdown } from "./countdown.js?v=20260817d";
+import { HistoryDB } from "./history.js?v=20260817d";
+import { h, fmtClock, timeAgo, toast } from "./ui.js?v=20260817d";
+import { createFundingBoard } from "./boards/funding.js?v=20260817d";
+import { createMemeBoard } from "./boards/meme.js?v=20260817d";
+import { createLiquidationBoard } from "./boards/liquidation.js?v=20260817d";
+import { createOptionsBoard } from "./boards/options.js?v=20260817d";
 
 // ── 设置 ─────────────────────────────────────────────────────────────
 const SETTINGS_KEY = "cryptoTerminalSettings";

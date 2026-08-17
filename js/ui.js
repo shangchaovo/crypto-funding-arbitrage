@@ -151,7 +151,12 @@ export function safetyBadge(token) {
     flagged: ["safety-flagged", "🚫 风险"],
     unknown: ["safety-unknown", "· 未检"],
   };
-  const [cls, label] = map[token.risk] || map.unknown;
+  let [cls, label] = map[token.risk] || map.unknown;
+  // 合约安全检测进行中:徽章显式标"检测中",绝不预先显示"安全"
+  if (token.riskPending && (token.risk === "unknown" || !token.risk)) {
+    cls = "safety-pending";
+    label = "⏳ 检测中";
+  }
   const reasons = (token.riskReasons || []).concat(token.rugFlags || []);
   const el = h("span", { class: `badge safety-badge ${cls}`, text: label });
   if (reasons.length) el.title = reasons.join("、");

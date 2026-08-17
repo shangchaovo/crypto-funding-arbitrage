@@ -3,7 +3,7 @@
 //              + DexScreener(boost 社交热度)
 // 目标:在"暴涨前或刚开始"阶段发现异动——成交量异常放大 + 动量刚启动 + 池龄新 + 有热度。
 // ============================================================================
-import { FundingAPI } from "./api.js?v=20260817c";
+import { FundingAPI } from "./api.js?v=20260817d";
 
 const { fetchWithRetry } = FundingAPI;
 
@@ -195,9 +195,11 @@ async function checkOne(t) {
 }
 
 // 对候选代币做合约安全检测;逐币限并发,失败不阻断(回落 risk:"unknown")
+// 注意:是否已检看 _secChecked,不看 risk——快帧会把 risk 预置为 "unknown",
+//       若按 risk 过滤会把所有候选误判为"已检",导致 GoPlus 一次都不跑。
 async function fetchSecurity(tokens) {
-  const withAddr = tokens.filter((t) => t.baseAddress && !t.risk);
-  await mapLimit(withAddr, 6, checkOne, 150);
+  const targets = tokens.filter((t) => t.baseAddress && !t._secChecked);
+  await mapLimit(targets, 6, async (t) => { await checkOne(t); t._secChecked = true; }, 150);
   return tokens;
 }
 
@@ -332,28 +334,54 @@ async function fetchMeme(options = {}) {
   // 貔貅防线①:硬 rug 特征(有买无卖/异常涨幅)
   tokens.forEach((t) => { t.rugFlags = cheapRedFlag(t); });
 
-  // 貔貅防线②:对"得分最高"的候选做 GoPlus 合约安全检测(逐币调用,故只查榜前 N 个)
-  if (options.checkSecurity !== false) {
-    const secN = options.securityTopN || 40;
-    const candidates = tokens
+  // 根据当前 risk 计算 shallow/stage/filtered 并按异动分排序(快/终两阶段共用)
+  const finalize = () => {
+    tokens.forEach((t) => {
+      if (!t.risk) t.risk = t.rugFlags.length ? "flagged" : "unknown";
+      t.shallow = t.liquidityUsd < 5000; // 浅盘警示(不筛除)
+      t.stage = stageOf(t); // 吸筹/启动/已拉升/平稳
+      // 默认筛除:GoPlus 判 danger(貔貅/高卖税/可冻结) 或 硬 rug 特征
+      t.filtered = t.risk === "danger" || t.rugFlags.length > 0;
+    });
+    tokens.sort((a, b) => b.score - a.score);
+  };
+
+  // 貔貅防线②候选:GoPlus 逐币调用最贵,只查"得分最高"的榜前 N 个
+  const secN = options.securityTopN || 40;
+  const candidates = options.checkSecurity !== false
+    ? tokens
       .filter((t) => t.rugFlags.length === 0 && t.baseAddress)
       .sort((a, b) => b.score - a.score)
-      .slice(0, secN);
-    if (candidates.length) {
-      status["goplus"] = "checking";
-      await fetchSecurity(candidates);
-      status["goplus"] = "ok";
-    }
-  }
-  tokens.forEach((t) => {
-    if (!t.risk) t.risk = t.rugFlags.length ? "flagged" : "unknown";
-    t.shallow = t.liquidityUsd < 5000; // 浅盘警示(不筛除)
-    t.stage = stageOf(t); // 吸筹/启动/已拉升/平稳
-    // 默认筛除:GoPlus 判 danger(貔貅/高卖税/可冻结) 或 硬 rug 特征
-    t.filtered = t.risk === "danger" || t.rugFlags.length > 0;
-  });
+      .slice(0, secN)
+    : [];
 
-  tokens.sort((a, b) => b.score - a.score);
+  // 秒回:合约检测最耗时(逐币 GoPlus ~10s+),先上板。
+  //   硬 rug 特征(有买无卖/异常涨幅)此时已即时筛除;
+  //   待检候选标 riskPending(徽章="检测中",绝不预先标"安全"),
+  //   GoPlus danger 出来后第二帧再筛除——貔貅防线不因求快而放宽。
+  if (typeof options.onQuick === "function") {
+    const pending = new Set(candidates);
+    tokens.forEach((t) => { t.riskPending = pending.has(t); });
+    finalize();
+    try {
+      options.onQuick({
+        tokens,
+        status: { ...status, goplus: candidates.length ? "checking" : "skip" },
+        fetchedAt: new Date().toISOString(),
+        securityPending: candidates.length > 0,
+      });
+    } catch (e) { /* 渲染回调不影响数据流程 */ }
+  }
+
+  // GoPlus 合约安全检测(逐币,限并发)
+  if (candidates.length) {
+    status["goplus"] = "checking";
+    await fetchSecurity(candidates);
+    status["goplus"] = "ok";
+  }
+  tokens.forEach((t) => { delete t.riskPending; });
+  finalize();
+
   const payload = { tokens, status, fetchedAt: new Date().toISOString() };
   _memeCache = { time: Date.now(), payload };
   return payload;

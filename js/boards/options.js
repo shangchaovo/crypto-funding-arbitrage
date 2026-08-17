@@ -3,10 +3,10 @@
 //   数据源:Deribit 公开期权 API。
 //   展示:按行权价的 Call(绿)/Put(红)持仓墙、Max Pain 最大痛点、PCR、25Δ Skew、大押注区。
 // ============================================================================
-import { Options } from "../options.js?v=20260817c";
+import { Options } from "../options.js?v=20260817d";
 import {
   h, fmtUsdCompact, fmtPrice, timeAgo, toast, skeletonHero, skeletonRows,
-} from "../ui.js?v=20260817c";
+} from "../ui.js?v=20260817d";
 
 export function createOptionsBoard(ctx) {
   let host = null;
@@ -17,6 +17,9 @@ export function createOptionsBoard(ctx) {
   let activeCoin = "BTC";
 
   let heroEl, statsEl, panelEl, tabsEl;
+
+  // 回到本板块时,数据年龄超过此值才后台静默刷新
+  const REMOUNT_STALE_MS = 60_000;
 
   async function load(force = false) {
     if (loading) return;
@@ -57,9 +60,16 @@ export function createOptionsBoard(ctx) {
     host.appendChild(heroEl);
     host.appendChild(statsEl);
     host.appendChild(panelEl);
-    heroEl.appendChild(skeletonHero());
-    panelEl.appendChild(skeletonRows());
-    load(true);
+    // 秒回:会话内已有数据→直接渲染不闪骨架;太旧才后台静默刷新,冷载才骨架+强刷
+    if (results.length) {
+      renderAll();
+      const age = Date.now() - Date.parse(fetchedAt || 0);
+      if (age > REMOUNT_STALE_MS) load(false);
+    } else {
+      heroEl.appendChild(skeletonHero());
+      panelEl.appendChild(skeletonRows());
+      load(true);
+    }
   }
 
   function renderAll() {

@@ -4,13 +4,13 @@
 //   子视图B 跨所套利(低费率所做多 / 高费率所做空,赚费率差)
 //   子视图C 全量费率矩阵(同一币种横向对比各所,热力着色)
 // ============================================================================
-import { FundingAPI } from "../api.js?v=20260817c";
-import { Arbitrage } from "../arbitrage.js?v=20260817c";
-import { HistoryDB } from "../history.js?v=20260817c";
+import { FundingAPI } from "../api.js?v=20260817d";
+import { Arbitrage } from "../arbitrage.js?v=20260817d";
+import { HistoryDB } from "../history.js?v=20260817d";
 import {
   h, fmtPctSigned, fmtApr, fmtUsd, fmtUsdCompact, fmtPrice, fmtClock,
   confBadge, symAvatar, downloadFile, toCsv, toast, skeletonHero, skeletonRows,
-} from "../ui.js?v=20260817c";
+} from "../ui.js?v=20260817d";
 
 const { EXCHANGE_ORDER, EXCHANGE_NAMES } = FundingAPI;
 
@@ -36,6 +36,9 @@ export function createFundingBoard(ctx) {
   let matrixRows = [];
 
   const S = () => ctx.settings;
+
+  // 回到本板块时,数据年龄超过此值才后台静默刷新(否则直接复用,秒回不闪)
+  const REMOUNT_STALE_MS = 60_000;
 
   // ── 数据加载(渐进式:快档费率先上板,现货/慢档随后并入)────────────────
   async function load(force = false) {
@@ -158,9 +161,16 @@ export function createFundingBoard(ctx) {
     host.appendChild(buildStats());
     host.appendChild(buildControls());
     host.appendChild(buildPanels());
-    heroEl.appendChild(skeletonHero());
-    panelsEl.appendChild(skeletonRows());
-    load(true);
+    // 秒回:会话内已有数据→直接渲染不闪骨架;太旧才后台静默刷新,冷载才骨架+强刷
+    if (rawRates.length) {
+      renderAll();
+      const age = Date.now() - Date.parse(fetchedAt || 0);
+      if (age > REMOUNT_STALE_MS) load(false);
+    } else {
+      heroEl.appendChild(skeletonHero());
+      panelsEl.appendChild(skeletonRows());
+      load(true);
+    }
   }
 
   let heroEl, statsEl, panelsEl;

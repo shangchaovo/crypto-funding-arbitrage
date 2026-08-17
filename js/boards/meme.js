@@ -3,12 +3,12 @@
 //   目标:在"暴涨前或刚开始"阶段发现异动——链上成交量异常放大 + 动量刚启动
 //        + 池龄新 + 有社交热度。貔貅/rug 默认筛除(有买无卖/异常涨幅/合约危险)。
 // ============================================================================
-import { Meme } from "../meme.js?v=20260817c";
+import { Meme } from "../meme.js?v=20260817d";
 import {
   h, fmtPctPointSigned, fmtUsdCompact, fmtPrice, fmtAge, timeAgo,
   chainBadge, stageBadge, safetyBadge, volGauge, symAvatar, downloadFile, toCsv, toast,
   skeletonHero, skeletonRows,
-} from "../ui.js?v=20260817c";
+} from "../ui.js?v=20260817d";
 
 const { NETWORKS, NETWORK_NAMES } = Meme;
 
@@ -18,6 +18,8 @@ export function createMemeBoard(ctx) {
   let status = {};
   let fetchedAt = null;
   let loading = false;
+  let securityPending = false; // 合约安全检测进行中(GoPlus 第二帧尚未回来)
+  let fromCache = false; // 当前展示的是 localStorage 快照(等首帧实时数据)
 
   let search = "";
   let chainFilter = "all";
@@ -26,17 +28,56 @@ export function createMemeBoard(ctx) {
 
   const S = () => ctx.settings;
 
+  // 回到本板块时,数据年龄超过此值才后台静默刷新(否则直接复用,秒回不闪)
+  const REMOUNT_STALE_MS = 45_000;
+
+  // 持久快照:页面重载后冷启动先用它秒回,实时数据回来再替换(仅缓存榜前 N 个,控制体积)
+  const CACHE_KEY = "memeBoardCacheV1";
+  const CACHE_MAX_AGE_MS = 30 * 60_000;
+  const CACHE_TOP_N = 120;
+  function saveCache() {
+    try {
+      const slim = tokens.slice(0, CACHE_TOP_N).map((t) => ({ ...t, riskPending: undefined, _secChecked: undefined }));
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ tokens: slim, fetchedAt }));
+    } catch (e) { /* 超配额/隐私模式忽略 */ }
+  }
+  function readCache() {
+    try {
+      const raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      const c = JSON.parse(raw);
+      if (!c || !Array.isArray(c.tokens) || !c.tokens.length) return null;
+      if (Date.now() - Date.parse(c.fetchedAt || 0) > CACHE_MAX_AGE_MS) return null;
+      return c;
+    } catch (e) { return null; }
+  }
+
   async function load(force = false) {
     if (loading) return;
     loading = true;
     ctx.setRefreshStatus("loading");
     try {
-      const res = await Meme.fetchMeme({ force });
+      const res = await Meme.fetchMeme({
+        force,
+        // 秒回第一帧:合约检测前先上板(安全徽章=检测中/未检,绝不标安全)
+        onQuick: (q) => {
+          tokens = q.tokens || [];
+          status = q.status || {};
+          securityPending = !!q.securityPending;
+          fromCache = false;
+          fetchedAt = q.fetchedAt || new Date().toISOString();
+          ctx.setLastUpdated(fetchedAt);
+          renderAll();
+        },
+      });
       tokens = res.tokens || [];
       status = res.status || {};
+      securityPending = false;
+      fromCache = false;
       fetchedAt = res.fetchedAt || new Date().toISOString();
       ctx.setLastUpdated(fetchedAt);
       ctx.setRefreshStatus(tokens.length ? "ok" : "error");
+      if (tokens.length) saveCache();
       if (tokens.length) {
         const early = tokens.filter((t) => !t.filtered && ["吸筹", "启动"].includes(t.stage.label));
         if (early.length) toast(`Meme 监测:${early.length} 个早期异动(吸筹/启动)`, "success", 2600);
@@ -102,6 +143,23 @@ export function createMemeBoard(ctx) {
     host.appendChild(buildControls());
     panelEl = h("div", { id: "memePanel" });
     host.appendChild(panelEl);
+    // 秒回三级:① 会话内已有数据→直接渲染不闪骨架;② 页面重载冷启→localStorage 快照秒回;
+    //   ③ 真·首次→骨架+强刷。快照/会话数据太旧都再后台静默刷新。
+    if (tokens.length) {
+      renderAll();
+      const age = Date.now() - Date.parse(fetchedAt || 0);
+      if (age > REMOUNT_STALE_MS) load(false);
+      return;
+    }
+    const snap = readCache();
+    if (snap) {
+      tokens = snap.tokens;
+      fetchedAt = snap.fetchedAt;
+      fromCache = true;
+      renderAll();
+      load(true); // 快照只是开胃菜,立刻拉实时替换
+      return;
+    }
     heroEl.appendChild(skeletonHero());
     panelEl.appendChild(skeletonRows());
     load(true);
@@ -181,7 +239,8 @@ export function createMemeBoard(ctx) {
       stat("早期异动", String(early), "pos"),
       stat("社交热度", String(boosted)),
       stat("已筛除 rug", String(filtered), "neg"),
-      stat("更新时间", fetchedAt ? timeAgo(Date.now() - Date.parse(fetchedAt)) : "--")));
+      stat("合约检测", securityPending ? "进行中…" : "完成", securityPending ? "" : "pos"),
+      stat("更新时间", (fromCache ? "快照 " : "") + (fetchedAt ? timeAgo(Date.now() - Date.parse(fetchedAt)) : "--"), fromCache ? "" : undefined)));
   }
 
   function sortBtn(key, label) {
