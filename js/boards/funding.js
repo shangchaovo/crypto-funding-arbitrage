@@ -4,13 +4,13 @@
 //   子视图B 跨所套利(低费率所做多 / 高费率所做空,赚费率差)
 //   子视图C 全量费率矩阵(同一币种横向对比各所,热力着色)
 // ============================================================================
-import { FundingAPI } from "../api.js?v=20260817d";
-import { Arbitrage } from "../arbitrage.js?v=20260817d";
-import { HistoryDB } from "../history.js?v=20260817d";
+import { FundingAPI } from "../api.js?v=20260817e";
+import { Arbitrage } from "../arbitrage.js?v=20260817e";
+import { HistoryDB } from "../history.js?v=20260817e";
 import {
   h, fmtPctSigned, fmtApr, fmtUsd, fmtUsdCompact, fmtPrice, fmtClock,
   confBadge, symAvatar, downloadFile, toCsv, toast, skeletonHero, skeletonRows,
-} from "../ui.js?v=20260817d";
+} from "../ui.js?v=20260817e";
 
 const { EXCHANGE_ORDER, EXCHANGE_NAMES } = FundingAPI;
 

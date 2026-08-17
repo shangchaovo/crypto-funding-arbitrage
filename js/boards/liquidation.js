@@ -4,10 +4,10 @@
 //   标注当前价、清算密集区(墙)、多空拥挤方向、主力收割方向。
 //   ⚠️ 公开 OI/K线/订单簿估算,非 CoinGlass 逐价格点真实清算数据。
 // ============================================================================
-import { Liquidation } from "../liquidation.js?v=20260817d";
+import { Liquidation } from "../liquidation.js?v=20260817e";
 import {
   h, fmtPctSigned, fmtUsd, fmtUsdCompact, fmtPrice, timeAgo, toast, skeletonHero, skeletonRows,
-} from "../ui.js?v=20260817d";
+} from "../ui.js?v=20260817e";
 
 export function createLiquidationBoard(ctx) {
   let host = null;

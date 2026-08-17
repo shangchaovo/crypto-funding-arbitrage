@@ -515,6 +515,16 @@ td.heat-empty { color: var(--border); }
 
 /* ── 页脚:数据源状态 ─────────────────────────────────────────────── */
 .footer { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--border-soft); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.support-links { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.support-label { font-size: 12px; }
+.support-links .btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; font-size: 12.5px; text-decoration: none; }
+/* Buy Me a Coffee:品牌黄做点缀,暗色下用黄调 ghost 风格保持辨识度又不刺眼 */
+.coffee-btn { background: rgba(255,221,0,0.10); border-color: rgba(255,221,0,0.38); color: #ffe35c; }
+.coffee-btn:hover { background: rgba(255,221,0,0.18); border-color: #ffdd00; transform: translateY(-1px); }
+.coffee-ico { filter: drop-shadow(0 0 4px rgba(255,221,0,0.35)); }
+.feedback-btn { color: var(--muted); }
+.feedback-btn:hover { color: var(--text); }
 .status-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
 .status-pill {
   display: inline-flex; align-items: center; gap: 7px;
@@ -713,6 +723,10 @@ td.heat-empty { color: var(--border); }
     z-index: 1;
   }
   tbody td:first-child { background: var(--panel); }
+  /* 页脚支持区:窄屏纵向堆叠,按钮全宽易点 */
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .support-links { width: 100%; }
+  .support-links .btn { flex: 1 1 auto; justify-content: center; }
 }
 
 /* 减少动效偏好 */

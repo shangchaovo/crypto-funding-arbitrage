@@ -3,10 +3,10 @@
 //   数据源:Deribit 公开期权 API。
 //   展示:按行权价的 Call(绿)/Put(红)持仓墙、Max Pain 最大痛点、PCR、25Δ Skew、大押注区。
 // ============================================================================
-import { Options } from "../options.js?v=20260817d";
+import { Options } from "../options.js?v=20260817e";
 import {
   h, fmtUsdCompact, fmtPrice, timeAgo, toast, skeletonHero, skeletonRows,
-} from "../ui.js?v=20260817d";
+} from "../ui.js?v=20260817e";
 
 export function createOptionsBoard(ctx) {
   let host = null;

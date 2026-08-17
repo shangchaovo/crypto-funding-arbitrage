@@ -3,12 +3,12 @@
 //   目标:在"暴涨前或刚开始"阶段发现异动——链上成交量异常放大 + 动量刚启动
 //        + 池龄新 + 有社交热度。貔貅/rug 默认筛除(有买无卖/异常涨幅/合约危险)。
 // ============================================================================
-import { Meme } from "../meme.js?v=20260817d";
+import { Meme } from "../meme.js?v=20260817e";
 import {
   h, fmtPctPointSigned, fmtUsdCompact, fmtPrice, fmtAge, timeAgo,
   chainBadge, stageBadge, safetyBadge, volGauge, symAvatar, downloadFile, toCsv, toast,
   skeletonHero, skeletonRows,
-} from "../ui.js?v=20260817d";
+} from "../ui.js?v=20260817e";
 
 const { NETWORKS, NETWORK_NAMES } = Meme;
 

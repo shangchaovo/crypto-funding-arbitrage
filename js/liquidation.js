@@ -5,7 +5,7 @@
 //        + 订单簿/技术位修正 → 各价格区间的"估算清算密度"。
 //   ⚠️ 重要:这是公开行情/OI 推导的概率密度估算,非 CoinGlass 逐价格点真实清算数据。
 // ============================================================================
-import { FundingAPI } from "./api.js?v=20260817d";
+import { FundingAPI } from "./api.js?v=20260817e";
 
 const { apiUrl, fetchWithRetry } = FundingAPI;
 
