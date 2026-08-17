@@ -203,9 +203,23 @@ export function toCsv(rows) {
   }).join(",")).join("\n");
 }
 
+// ── 骨架屏:板块首载占位(load 完成后 renderAll 会覆盖,不会闪到后台刷新)─────
+export function skeletonHero(cards = 4) {
+  const g = h("div.sk-hero");
+  for (let i = 0; i < cards; i++) g.appendChild(h("div.sk.sk-card"));
+  return g;
+}
+
+export function skeletonRows(rows = 9) {
+  const wrap = h("div.sk-rows");
+  wrap.appendChild(h("div.sk.sk-line.sk-head"));
+  for (let i = 0; i < rows; i++) wrap.appendChild(h("div.sk.sk-line", { style: `width:${92 - ((i * 7) % 30)}%` }));
+  return wrap;
+}
+
 export const UI = {
   h, fmtPct, fmtPctSigned, fmtApr, fmtUsd, fmtUsdCompact, fmtPrice, fmtAge,
   fmtPctPoint, fmtPctPointSigned,
   timeAgo, fmtClock, toast, confBadge, chainBadge, stageBadge, safetyBadge,
-  volGauge, momentumBar, symAvatar, downloadFile, toCsv,
+  volGauge, momentumBar, symAvatar, downloadFile, toCsv, skeletonHero, skeletonRows,
 };

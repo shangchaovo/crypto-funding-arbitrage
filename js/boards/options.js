@@ -3,10 +3,10 @@
 //   数据源:Deribit 公开期权 API。
 //   展示:按行权价的 Call(绿)/Put(红)持仓墙、Max Pain 最大痛点、PCR、25Δ Skew、大押注区。
 // ============================================================================
-import { Options } from "../options.js?v=20260817b";
+import { Options } from "../options.js?v=20260817c";
 import {
-  h, fmtUsdCompact, fmtPrice, timeAgo, toast,
-} from "../ui.js?v=20260817b";
+  h, fmtUsdCompact, fmtPrice, timeAgo, toast, skeletonHero, skeletonRows,
+} from "../ui.js?v=20260817c";
 
 export function createOptionsBoard(ctx) {
   let host = null;
@@ -30,14 +30,13 @@ export function createOptionsBoard(ctx) {
       if (results.length && !results.some((r) => r.coin === activeCoin)) activeCoin = results[0].coin;
       ctx.setLastUpdated(fetchedAt);
       ctx.setRefreshStatus(results.length ? "ok" : "error");
-      renderAll();
     } catch (e) {
       console.error("options load failed", e);
       ctx.setRefreshStatus("error");
       toast(`期权数据加载失败:${e.message}`, "error");
-      renderAll();
     } finally {
-      loading = false;
+      loading = false; // 先复位再渲染,空态/加载态文案才不会停在"加载中"
+      renderAll();
     }
   }
 
@@ -58,6 +57,8 @@ export function createOptionsBoard(ctx) {
     host.appendChild(heroEl);
     host.appendChild(statsEl);
     host.appendChild(panelEl);
+    heroEl.appendChild(skeletonHero());
+    panelEl.appendChild(skeletonRows());
     load(true);
   }
 

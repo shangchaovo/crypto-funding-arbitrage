@@ -3,11 +3,12 @@
 //   目标:在"暴涨前或刚开始"阶段发现异动——链上成交量异常放大 + 动量刚启动
 //        + 池龄新 + 有社交热度。貔貅/rug 默认筛除(有买无卖/异常涨幅/合约危险)。
 // ============================================================================
-import { Meme } from "../meme.js?v=20260817b";
+import { Meme } from "../meme.js?v=20260817c";
 import {
   h, fmtPctPointSigned, fmtUsdCompact, fmtPrice, fmtAge, timeAgo,
   chainBadge, stageBadge, safetyBadge, volGauge, symAvatar, downloadFile, toCsv, toast,
-} from "../ui.js?v=20260817b";
+  skeletonHero, skeletonRows,
+} from "../ui.js?v=20260817c";
 
 const { NETWORKS, NETWORK_NAMES } = Meme;
 
@@ -36,7 +37,6 @@ export function createMemeBoard(ctx) {
       fetchedAt = res.fetchedAt || new Date().toISOString();
       ctx.setLastUpdated(fetchedAt);
       ctx.setRefreshStatus(tokens.length ? "ok" : "error");
-      renderAll();
       if (tokens.length) {
         const early = tokens.filter((t) => !t.filtered && ["吸筹", "启动"].includes(t.stage.label));
         if (early.length) toast(`Meme 监测:${early.length} 个早期异动(吸筹/启动)`, "success", 2600);
@@ -45,9 +45,9 @@ export function createMemeBoard(ctx) {
       console.error("meme load failed", e);
       ctx.setRefreshStatus("error");
       toast(`Meme 数据加载失败:${e.message}`, "error");
-      renderAll();
     } finally {
-      loading = false;
+      loading = false; // 先复位再渲染,否则 0 早期异动时 hero 会一直停在"正在扫描…"
+      renderAll();
     }
   }
 
@@ -102,6 +102,8 @@ export function createMemeBoard(ctx) {
     host.appendChild(buildControls());
     panelEl = h("div", { id: "memePanel" });
     host.appendChild(panelEl);
+    heroEl.appendChild(skeletonHero());
+    panelEl.appendChild(skeletonRows());
     load(true);
   }
 

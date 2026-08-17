@@ -485,6 +485,32 @@ td.heat-empty { color: var(--border); }
 @keyframes spin { to { transform: rotate(360deg); } }
 .empty-state .ico { font-size: 34px; margin-bottom: 10px; opacity: 0.6; }
 
+/* ── 骨架屏(首载占位)────────────────────────────────────────────── */
+.sk {
+  position: relative; overflow: hidden;
+  background: var(--panel-2);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+}
+.sk::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.055), transparent);
+  transform: translateX(-100%);
+  animation: skSweep 1.5s var(--ease) infinite;
+}
+@keyframes skSweep { to { transform: translateX(100%); } }
+.sk-hero { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-bottom: 16px; }
+.sk-card { height: 122px; border-radius: var(--radius); }
+.sk-rows {
+  display: flex; flex-direction: column; gap: 11px;
+  padding: 20px 18px;
+  background: var(--panel);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+}
+.sk-line { height: 15px; }
+.sk-line.sk-head { height: 20px; width: 38%; margin-bottom: 8px; }
+
 /* ── 页脚:数据源状态 ─────────────────────────────────────────────── */
 .footer { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--border-soft); }
 .status-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
@@ -673,7 +699,12 @@ td.heat-empty { color: var(--border); }
   .controls { flex-direction: column; align-items: stretch; }
   .filter-row { width: 100%; }
   .export-group { margin-left: 0; }
-  .time-panel { min-width: 0; flex: 1; }
+  .header-actions { gap: 8px; }
+  /* 时间/状态卡:等分但不截断——值单行不换行、字号略缩 */
+  .time-panel { min-width: 0; flex: 1 1 0; padding: 6px 9px; gap: 1px; }
+  .time-panel .muted { font-size: 9px; white-space: nowrap; }
+  .time-panel strong { font-size: 12.5px; white-space: nowrap; }
+  .refresh-status { white-space: nowrap; }
   thead th:first-child, tbody td:first-child {
     position: sticky; left: 0;
     background: var(--panel-2);

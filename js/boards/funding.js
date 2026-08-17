@@ -4,13 +4,13 @@
 //   子视图B 跨所套利(低费率所做多 / 高费率所做空,赚费率差)
 //   子视图C 全量费率矩阵(同一币种横向对比各所,热力着色)
 // ============================================================================
-import { FundingAPI } from "../api.js?v=20260817b";
-import { Arbitrage } from "../arbitrage.js?v=20260817b";
-import { HistoryDB } from "../history.js?v=20260817b";
+import { FundingAPI } from "../api.js?v=20260817c";
+import { Arbitrage } from "../arbitrage.js?v=20260817c";
+import { HistoryDB } from "../history.js?v=20260817c";
 import {
   h, fmtPctSigned, fmtApr, fmtUsd, fmtUsdCompact, fmtPrice, fmtClock,
-  confBadge, symAvatar, downloadFile, toCsv, toast,
-} from "../ui.js?v=20260817b";
+  confBadge, symAvatar, downloadFile, toCsv, toast, skeletonHero, skeletonRows,
+} from "../ui.js?v=20260817c";
 
 const { EXCHANGE_ORDER, EXCHANGE_NAMES } = FundingAPI;
 
@@ -158,6 +158,8 @@ export function createFundingBoard(ctx) {
     host.appendChild(buildStats());
     host.appendChild(buildControls());
     host.appendChild(buildPanels());
+    heroEl.appendChild(skeletonHero());
+    panelsEl.appendChild(skeletonRows());
     load(true);
   }
 

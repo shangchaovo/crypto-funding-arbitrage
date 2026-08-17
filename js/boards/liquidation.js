@@ -4,10 +4,10 @@
 //   标注当前价、清算密集区(墙)、多空拥挤方向、主力收割方向。
 //   ⚠️ 公开 OI/K线/订单簿估算,非 CoinGlass 逐价格点真实清算数据。
 // ============================================================================
-import { Liquidation } from "../liquidation.js?v=20260817b";
+import { Liquidation } from "../liquidation.js?v=20260817c";
 import {
-  h, fmtPctSigned, fmtUsd, fmtUsdCompact, fmtPrice, timeAgo, toast,
-} from "../ui.js?v=20260817b";
+  h, fmtPctSigned, fmtUsd, fmtUsdCompact, fmtPrice, timeAgo, toast, skeletonHero, skeletonRows,
+} from "../ui.js?v=20260817c";
 
 export function createLiquidationBoard(ctx) {
   let host = null;
@@ -40,15 +40,14 @@ export function createLiquidationBoard(ctx) {
       if (results.length && !results.some((r) => r.symbol === activeSymbol)) activeSymbol = results[0].symbol;
       ctx.setLastUpdated(fetchedAt);
       ctx.setRefreshStatus(results.length ? "ok" : "error");
-      renderAll();
       if (!results.length) toast("清算数据暂不可用(OKX 限流),稍后刷新", "error");
     } catch (e) {
       console.error("liquidation load failed", e);
       ctx.setRefreshStatus("error");
       toast(`清算数据加载失败:${e.message}`, "error");
-      renderAll();
     } finally {
-      loading = false;
+      loading = false; // 先复位再渲染(onPartial 渐进渲染仍保持 loading=true)
+      renderAll();
     }
   }
 
@@ -71,6 +70,8 @@ export function createLiquidationBoard(ctx) {
     host.appendChild(statsEl);
     host.appendChild(panelEl);
     host.appendChild(h("p.disclaimer", { text: "⚠️ 本图为公开行情/OI/订单簿推导的概率密度估算,用于识别流动性密集区,非 CoinGlass 逐价格点真实清算数据,不构成投资建议。" }));
+    heroEl.appendChild(skeletonHero());
+    panelEl.appendChild(skeletonRows());
     load(true);
   }
 

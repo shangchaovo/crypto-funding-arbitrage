@@ -3,7 +3,7 @@
 //              + DexScreener(boost 社交热度)
 // 目标:在"暴涨前或刚开始"阶段发现异动——成交量异常放大 + 动量刚启动 + 池龄新 + 有热度。
 // ============================================================================
-import { FundingAPI } from "./api.js?v=20260817b";
+import { FundingAPI } from "./api.js?v=20260817c";
 
 const { fetchWithRetry } = FundingAPI;
 
