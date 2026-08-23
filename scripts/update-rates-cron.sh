@@ -7,9 +7,9 @@
 #   workflow 权限推不上 yml)。抓数失败 / 无变更 / 部署失败都只记日志,下轮再来。
 # ============================================================================
 set -u
-export PATH="/opt/homebrew/bin:__HOME__/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export HOME="__HOME__"
-REPO="__HOME__/funding-arb-build"
+export HOME="${HOME:-$(echo ~)}"
+export PATH="/opt/homebrew/bin:$HOME/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO" || exit 1
 
 TS() { date '+%F %T'; }

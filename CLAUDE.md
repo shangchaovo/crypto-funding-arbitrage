@@ -17,6 +17,7 @@ PORT=8779 node server.js          # 自定义端口
 
 **生产**(launchd 常驻,`com.local.funding-dashboard`,PORT=8768):
 ```bash
+sh scripts/install-launchd.sh      # 首次安装/重装:把 launchd/*.plist.template 的 __HOME__ 渲染成本机家目录后装载(含费率刷新 job)
 launchctl kickstart -k gui/$(id -u)/com.local.funding-dashboard   # 硬重启
 tail -f logs/server.out.log logs/server.err.log
 ```
@@ -32,7 +33,7 @@ source ~/.config/cloudflare/env        # 提供 CLOUDFLARE_API_TOKEN + CLOUDFLAR
 sh scripts/deploy-cloudflare-pages.sh  # 拷 index.html + assets/css/data/js/functions 到临时目录,wrangler pages deploy
 ```
 
-部署脚本只上传公共资产(自动排除 `.git`/`scripts`/`logs`/`launchd`)。`git push` 到 `shangchaovo/crypto-funding-arbitrage`(私有)只做**备份**,不影响线上。Cloudflare 凭据在 `~/.config/cloudflare/env`,account `***REMOVED***`。
+部署脚本只上传公共资产(自动排除 `.git`/`scripts`/`logs`/`launchd`)。`git push` 到 GitHub 只做**备份**,不影响线上。Cloudflare 凭据在 `~/.config/cloudflare/env`(含 `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID`,均不入库)。
 
 ## 数据保鲜(为何不再是 GitHub Actions)
 
