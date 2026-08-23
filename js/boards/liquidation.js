@@ -4,10 +4,10 @@
 //   标注当前价、清算密集区(墙)、多空拥挤方向、主力收割方向。
 //   ⚠️ 公开 OI/K线/订单簿估算,非 CoinGlass 逐价格点真实清算数据。
 // ============================================================================
-import { Liquidation } from "../liquidation.js?v=20260817e";
+import { Liquidation } from "../liquidation.js?v=20260823";
 import {
   h, fmtPctSigned, fmtUsd, fmtUsdCompact, fmtPrice, timeAgo, toast, skeletonHero, skeletonRows,
-} from "../ui.js?v=20260817e";
+} from "../ui.js?v=20260823";
 
 export function createLiquidationBoard(ctx) {
   let host = null;
@@ -175,7 +175,8 @@ export function createLiquidationBoard(ctx) {
     const cols = bins.map((b) => {
       const shortDominant = b.shortLiqScore >= b.longLiqScore;
       const op = 0.12 + b.intensity * 0.88;
-      const color = shortDominant ? `rgba(255,107,98,${op})` : `rgba(56,225,196,${op})`;
+      // 浅色主题:空=红、多=绿,与全站语义色一致(原为青/红)
+      const color = shortDominant ? `rgba(225, 77, 67, ${op})` : `rgba(22, 163, 74, ${op})`;
       const height = Math.max(2, b.intensity * 100);
       const sideTxt = b.side === "upper" ? "上方(空头清算)" : "下方(多头清算)";
       const title = `$${fmtPrice(b.price)} · ${sideTxt}\n密度强度 ${(b.intensity * 100).toFixed(0)}%\n多爆 ${fmtUsdCompact(b.longLiqScore)} / 空爆 ${fmtUsdCompact(b.shortLiqScore)}\n距现价 ${b.side === "upper" ? "+" : "-"}${b.distancePct.toFixed(2)}%`;
@@ -185,8 +186,8 @@ export function createLiquidationBoard(ctx) {
 
     return h("div.heatmap",
       h("div.heatmap-legend",
-        h("span.legend-item", h("span.swatch", { style: "background:rgba(255,107,98,0.9)" }), "空头清算区(上方·价格涨→空爆)"),
-        h("span.legend-item", h("span.swatch", { style: "background:rgba(56,225,196,0.9)" }), "多头清算区(下方·价格跌→多爆)"),
+        h("span.legend-item", h("span.swatch", { style: "background:rgba(225, 77, 67, 0.9)" }), "空头清算区(上方·价格涨→空爆)"),
+        h("span.legend-item", h("span.swatch", { style: "background:rgba(22, 163, 74, 0.9)" }), "多头清算区(下方·价格跌→多爆)"),
         h("span.legend-item.dim", `现价 $${fmtPrice(cur)}`)),
       h("div.hm-stage",
         h("div.hm-cols", cols),

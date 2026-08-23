@@ -148,15 +148,16 @@ const DB_NAME = "fundingHistory";
   }
 
   /* ── SVG Chart Renderer ── */
+  /* 浅色主题可读配色:全部加深到白底可辨,同时保留各所品牌辨识度 */
   const CHART_COLORS = {
-    binance: "#f0b90b",
-    okx: "#e6edf3", // 优化: 原 #000000 在暗底完全不可见，改为近白
-    bybit: "#f7a600",
-    gate: "#00e0a4",
-    mexc: "#4c9dff",
-    bitget: "#00f0ff",
-    hyperliquid: "#00d1ff",
-    dydx: "#6966ff",
+    binance: "#d9a400",
+    okx: "#1f2937", // 白底上用深石板灰(原近白 #e6edf3 是为暗底设计的)
+    bybit: "#e08800",
+    gate: "#0aa37e",
+    mexc: "#3b82f6",
+    bitget: "#0891b2",
+    hyperliquid: "#0c8a93",
+    dydx: "#7c5cd6",
   };
 
   function renderHistoryChart(symbol, history, container) {

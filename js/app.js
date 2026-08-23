@@ -3,14 +3,14 @@
 //   板块路由(hash)+ 设置 + 刷新编排 + 结算倒计时 + 历史图 Modal + 盈亏模拟。
 //   板块即插即用:在 BOARDS 注册一个 create 工厂即可。
 // ============================================================================
-import { FundingAPI } from "./api.js?v=20260817e";
-import { Countdown } from "./countdown.js?v=20260817e";
-import { HistoryDB } from "./history.js?v=20260817e";
-import { h, fmtClock, timeAgo, toast } from "./ui.js?v=20260817e";
-import { createFundingBoard } from "./boards/funding.js?v=20260817e";
-import { createMemeBoard } from "./boards/meme.js?v=20260817e";
-import { createLiquidationBoard } from "./boards/liquidation.js?v=20260817e";
-import { createOptionsBoard } from "./boards/options.js?v=20260817e";
+import { FundingAPI } from "./api.js?v=20260823";
+import { Countdown } from "./countdown.js?v=20260823";
+import { HistoryDB } from "./history.js?v=20260823";
+import { h, fmtClock, timeAgo, toast } from "./ui.js?v=20260823";
+import { createFundingBoard } from "./boards/funding.js?v=20260823";
+import { createMemeBoard } from "./boards/meme.js?v=20260823";
+import { createLiquidationBoard } from "./boards/liquidation.js?v=20260823";
+import { createOptionsBoard } from "./boards/options.js?v=20260823";
 
 // ── 设置 ─────────────────────────────────────────────────────────────
 const SETTINGS_KEY = "cryptoTerminalSettings";
@@ -206,7 +206,7 @@ function renderChart(symbol, history) {
   const colors = HistoryDB.CHART_COLORS || {};
   Array.from(seen).slice(0, 8).forEach((ex) => {
     legend.appendChild(h("span.lg",
-      h("span.swatch", { style: `background:${colors[ex] || "#5cb8ff"}` }),
+      h("span.swatch", { style: `background:${colors[ex] || "#3a63d8"}` }),
       h("span", { text: EXCHANGE_NAMES[ex] || ex })));
   });
 }

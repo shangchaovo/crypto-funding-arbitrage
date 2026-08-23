@@ -3,10 +3,10 @@
 //   数据源:Deribit 公开期权 API。
 //   展示:按行权价的 Call(绿)/Put(红)持仓墙、Max Pain 最大痛点、PCR、25Δ Skew、大押注区。
 // ============================================================================
-import { Options } from "../options.js?v=20260817e";
+import { Options } from "../options.js?v=20260823";
 import {
   h, fmtUsdCompact, fmtPrice, timeAgo, toast, skeletonHero, skeletonRows,
-} from "../ui.js?v=20260817e";
+} from "../ui.js?v=20260823";
 
 export function createOptionsBoard(ctx) {
   let host = null;
@@ -168,8 +168,8 @@ export function createOptionsBoard(ctx) {
 
     return h("div.wall",
       h("div.heatmap-legend",
-        h("span.legend-item", h("span.swatch", { style: "background:rgba(68,208,123,0.9)" }), "Call 持仓(上方·看涨)"),
-        h("span.legend-item", h("span.swatch", { style: "background:rgba(255,107,98,0.9)" }), "Put 持仓(下方·看跌/保护)"),
+        h("span.legend-item", h("span.swatch", { style: "background:rgba(22, 163, 74, 0.9)" }), "Call 持仓(上方·看涨)"),
+        h("span.legend-item", h("span.swatch", { style: "background:rgba(225, 77, 67, 0.9)" }), "Put 持仓(下方·看跌/保护)"),
         mpPct != null ? h("span.legend-item.dim", `🎯 Max Pain $${fmtPrice(mp.maxPainStrike)}`) : null,
         h("span.legend-item.dim", `现货 $${fmtPrice(spot)}`)),
       h("div.wall-stage",
