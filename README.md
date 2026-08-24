@@ -69,3 +69,7 @@ sh scripts/deploy-cloudflare-pages.sh
 ## 免责声明
 
 本项目仅供学习与研究,所有数据来自公开接口,不构成任何投资建议。加密资产波动巨大,请自行评估风险。
+
+## License
+
+[MIT](LICENSE) © 2026 shangchaovo
