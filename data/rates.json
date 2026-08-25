@@ -1,28 +1,28 @@
 {
-  "fetchedAt": "2026-08-25T10:50:04.118Z",
+  "fetchedAt": "2026-08-25T11:00:24.847Z",
   "source": "prefetch-local",
   "exchangeStatus": {
-    "hyperliquid": {
-      "status": "ok",
-      "error": ""
-    },
-    "bitget": {
-      "status": "ok",
-      "error": ""
-    },
-    "dydx": {
-      "status": "ok",
-      "error": ""
-    },
-    "mexc": {
-      "status": "ok",
-      "error": ""
+    "okx": {
+      "status": "fallback",
+      "error": "Using previous cached rows"
     },
     "gate": {
-      "status": "ok",
-      "error": ""
+      "status": "fallback",
+      "error": "Using previous cached rows"
     },
-    "okx": {
+    "bitget": {
+      "status": "fallback",
+      "error": "Using previous cached rows"
+    },
+    "mexc": {
+      "status": "fallback",
+      "error": "Using previous cached rows"
+    },
+    "hyperliquid": {
+      "status": "fallback",
+      "error": "Using previous cached rows"
+    },
+    "dydx": {
       "status": "fallback",
       "error": "Using previous cached rows"
     }
