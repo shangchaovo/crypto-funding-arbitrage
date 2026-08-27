@@ -1,16 +1,16 @@
 {
-  "fetchedAt": "2026-08-27T21:05:32.188Z",
+  "fetchedAt": "2026-08-27T21:19:43.769Z",
   "source": "prefetch-local",
   "exchangeStatus": {
     "okx": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
-    "hyperliquid": {
+    "gate": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
-    "gate": {
+    "hyperliquid": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
