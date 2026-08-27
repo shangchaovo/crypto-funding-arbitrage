@@ -1,12 +1,8 @@
 {
-  "fetchedAt": "2026-08-27T22:16:30.127Z",
+  "fetchedAt": "2026-08-27T22:30:41.858Z",
   "source": "prefetch-local",
   "exchangeStatus": {
     "okx": {
-      "status": "fallback",
-      "error": "Using previous cached rows"
-    },
-    "gate": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
@@ -14,15 +10,19 @@
       "status": "fallback",
       "error": "Using previous cached rows"
     },
+    "gate": {
+      "status": "fallback",
+      "error": "Using previous cached rows"
+    },
     "mexc": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
-    "bitget": {
+    "dydx": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
-    "dydx": {
+    "bitget": {
       "status": "fallback",
       "error": "Using previous cached rows"
     }
