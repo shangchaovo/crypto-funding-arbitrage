@@ -1,12 +1,12 @@
 {
-  "fetchedAt": "2026-08-28T01:21:01.506Z",
+  "fetchedAt": "2026-08-28T01:35:13.147Z",
   "source": "prefetch-local",
   "exchangeStatus": {
     "okx": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
-    "mexc": {
+    "gate": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
@@ -14,7 +14,7 @@
       "status": "fallback",
       "error": "Using previous cached rows"
     },
-    "gate": {
+    "mexc": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
