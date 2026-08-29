@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-29T02:12:57.342Z",
+  "fetchedAt": "2026-08-29T02:27:06.436Z",
   "source": "prefetch-local",
   "exchangeStatus": {
     "okx": {
@@ -14,15 +14,15 @@
       "status": "fallback",
       "error": "Using previous cached rows"
     },
-    "dydx": {
-      "status": "fallback",
-      "error": "Using previous cached rows"
-    },
     "bitget": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
     "mexc": {
+      "status": "fallback",
+      "error": "Using previous cached rows"
+    },
+    "dydx": {
       "status": "fallback",
       "error": "Using previous cached rows"
     }
