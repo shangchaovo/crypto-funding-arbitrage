@@ -1,20 +1,20 @@
 {
-  "fetchedAt": "2026-08-29T02:41:20.311Z",
+  "fetchedAt": "2026-08-29T02:55:30.175Z",
   "source": "prefetch-local",
   "exchangeStatus": {
-    "gate": {
-      "status": "fallback",
-      "error": "Using previous cached rows"
-    },
     "hyperliquid": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
-    "bitget": {
+    "gate": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
     "mexc": {
+      "status": "fallback",
+      "error": "Using previous cached rows"
+    },
+    "bitget": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
