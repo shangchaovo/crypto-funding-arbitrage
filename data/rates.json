@@ -1,12 +1,12 @@
 {
-  "fetchedAt": "2026-08-31T08:21:33.751Z",
+  "fetchedAt": "2026-08-31T08:33:41.558Z",
   "source": "prefetch-local",
   "exchangeStatus": {
     "okx": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
-    "gate": {
+    "dydx": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
@@ -22,7 +22,7 @@
       "status": "fallback",
       "error": "Using previous cached rows"
     },
-    "dydx": {
+    "gate": {
       "status": "fallback",
       "error": "Using previous cached rows"
     }
