@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-06T19:43:27.467Z",
+  "fetchedAt": "2026-09-06T19:55:08.998Z",
   "source": "prefetch-local",
   "exchangeStatus": {
     "hyperliquid": {
@@ -18,11 +18,11 @@
       "status": "fallback",
       "error": "Using previous cached rows"
     },
-    "dydx": {
+    "bitget": {
       "status": "fallback",
       "error": "Using previous cached rows"
     },
-    "bitget": {
+    "dydx": {
       "status": "fallback",
       "error": "Using previous cached rows"
     }
