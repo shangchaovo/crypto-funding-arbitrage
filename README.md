@@ -1,10 +1,21 @@
 # 加密终端 · Unified Crypto Terminal
 
-统一的多板块加密货币衍生品监控终端:**资金费率套利 · Meme 异动 · 主力清算热图 · 期权 Wall**。
+统一的多板块加密货币衍生品监控终端：**资金费率套利 · Meme 异动 · 主力清算热图 · 期权 Wall**。
 
-**🌐 线上站点:[crypto-funding-arbitrage.pages.dev](https://crypto-funding-arbitrage.pages.dev/)**
+**线上站点：[crypto-funding-arbitrage.pages.dev](https://crypto-funding-arbitrage.pages.dev/)**
 
-纯 Vanilla JS(ES Modules)+ HTML + CSS,**无构建系统、无框架、无依赖安装**;部署在 Cloudflare Pages,数据全部来自各交易所/链上公开 API。
+Live **crypto derivatives terminal** for cross-exchange **funding-rate arbitrage**, Solana/Base/BSC **meme-coin movers**, BTC/ETH/SOL **liquidation heatmaps**, and BTC/ETH **options walls** (max pain, PCR, 25Δ skew). Vanilla JS + Cloudflare Pages — no build step, public APIs only.
+
+## 核心用处
+
+打开一个网页，就能同时做四件事：
+
+1. **收资金费**：筛出现货可买的正向 carry，或跨所费率差
+2. **抓 Meme 异动**：量能刚起来、池子还新、合约检测尚未放行的不标「安全」
+3. **看清算墙**：估算多空爆仓密集区，判断主力更可能往哪边收割
+4. **看期权 Wall**：Max Pain、持仓墙、偏度，判断大资金把行权价押在哪
+
+纯 Vanilla JS（ES Modules）+ HTML + CSS，**无构建系统、无框架、无依赖安装**；部署在 Cloudflare Pages，数据全部来自各交易所/链上公开 API。
 
 | 资金费率套利 | Meme 异动 |
 |:---:|:---:|
