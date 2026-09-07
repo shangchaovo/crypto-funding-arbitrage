@@ -1,10 +1,17 @@
 # 加密终端
 
-我自己看盘用的一页。资金费率、Meme 异动、清算热图、期权墙，切来切去都在这儿。
+我自己看盘用的一页。资金费率、链上 Meme、清算热图、期权墙，切来切去都在这儿，不用在五家交易所和一堆链上工具之间跳。
 
-现在开着：[crypto-funding-arbitrage.pages.dev](https://crypto-funding-arbitrage.pages.dev/)
+**现在开着：[crypto-funding-arbitrage.pages.dev](https://crypto-funding-arbitrage.pages.dev/)**
 
-没有框架，也没有打包。浏览器直接拉各所公开接口；在国内走 Cloudflare 上的代理。过期的数据会标出来，不会拿假数填空。
+四个板块各自干一件事：
+
+- **资金费率** — 找「现货能买、再空永续收资金费」的正向机会，或者同一币种的跨所费率差。Gate / MEXC / Bitget / OKX / Hyperliquid / dYdX 大概 3000 个永续，费率统一折成 8 小时再横着比。超过 15 分钟标陈旧。
+- **Meme 异动** — Solana / Base / BSC / ETH 上量能刚起来、池子还新的标的。合约没检完只标「检测中」，有买无卖、明显 rug 的默认筛掉。
+- **清算热图** — 用 OKX 持仓、杠杆分层和入场分布，估 BTC / ETH / SOL / DOGE / XRP 在哪些价位爆仓会堆在一起，红空绿多。
+- **期权 Wall** — BTC / ETH 的 Call / Put 持仓墙、Max Pain、PCR、25Δ 偏度。Deribit 优先，被限流退 OKX。
+
+没有框架，也没有打包，浏览器直连公开接口；国内走 Cloudflare 上的代理。本地兜底缓存会定期更新。下面截图可以点进去对应板块。
 
 | 资金费率套利 | Meme 异动 |
 |:---:|:---:|
